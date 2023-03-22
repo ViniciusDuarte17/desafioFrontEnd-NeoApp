@@ -10,7 +10,7 @@ export default createGlobalStyle`
 }
  
 body {
-        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap'); 
         font-family: 'Montserrat', sans-serif;
         margin: 0;
         padding: 0;
@@ -21,3 +21,5 @@ body {
         font-family: 'Nunito', sans-serif;
     }
 `;
+
+
