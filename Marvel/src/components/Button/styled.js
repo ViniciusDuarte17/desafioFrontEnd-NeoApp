@@ -10,6 +10,7 @@ export const Button = styled.button`
     box-shadow: none;
     font-family: 'Nunito', sans-serif;
     font-size: medium;
+  
     cursor: pointer;
     
     &:hover, &:focus {

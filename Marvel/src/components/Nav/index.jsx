@@ -8,14 +8,20 @@ import * as S from "./styled";
 
 export const Nav = () => {
   const navigate = useNavigate()
- 
+
   return (
     <>
-        <S.ContainerNav >
-          <Button text={"Home"} onClick={() => goToHome(navigate)} />
+      <S.ContainerNav >
+        <Button
+          text={"Home"}
+          onClick={() => goToHome(navigate)}
+        />
 
-          <Button text={"Carrinho"} onClick={() => goToCart(navigate)} />
-        </S.ContainerNav>
+        <Button
+          text={"Carrinho"}
+          onClick={() => goToCart(navigate)}
+        />
+      </S.ContainerNav>
     </>
   );
 };
