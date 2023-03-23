@@ -6,6 +6,8 @@ export const Container = styled.main`
     min-height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 5%;
+    padding-bottom: 5%;
 
     @media screen and (max-width: 914px) {
         grid-template-columns: 1fr 1fr 1fr;
