@@ -16,7 +16,7 @@ export const Nav = () => {
           text={"Home"}
           onClick={() => goToHome(navigate)}
         />
-
+       
         <Button
           text={"Carrinho"}
           onClick={() => goToCart(navigate)}
