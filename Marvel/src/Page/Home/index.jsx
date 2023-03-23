@@ -12,7 +12,7 @@ import { fetchData } from '../../Redux/apiSlice';
 export const Home = () => {
     const dispatch = useDispatch();
 
-    const comics = useSelector((state) => state.api.data);
+    const comics = useSelector((state) => state.api.comics);
 
     useEffect(() => {
         dispatch(fetchData());

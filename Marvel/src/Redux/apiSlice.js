@@ -7,7 +7,7 @@ import { TS, API_KEY, HASH } from "../KEY/securityKey";
 export const apiSlice = createSlice({
   name: 'api',
   initialState: {
-    data: [],
+    comics: [],
     status: null,
     error: null,
   },
@@ -17,12 +17,12 @@ export const apiSlice = createSlice({
       state.status = 'loading';
     },
     getDataSuccess: (state, action) => {
-      state.data = action.payload;
+      state.comics = action.payload;
       state.status = 'success';
       state.error = null;
     },
     getDataFailure: (state, action) => {
-      state.data = [];
+      state.comics = [];
       state.status = 'failure';
       state.error = action.payload;
     },
