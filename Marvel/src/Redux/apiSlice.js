@@ -8,43 +8,69 @@ export const apiSlice = createSlice({
   name: 'api',
   initialState: {
     comics: [],
+    currentPage: 1,
+    pageSize: 20,
+    totalResults: 0,
     status: null,
     error: null,
   },
 
   reducers: {
-    getData: (state) => {
+
+    getComics: (state) => {
       state.status = 'loading';
     },
-    getDataSuccess: (state, action) => {
+
+    getComicsSuccess: (state, action) => {
       state.comics = action.payload;
       state.status = 'success';
       state.error = null;
     },
-    getDataFailure: (state, action) => {
+
+    getComicsFailure: (state, action) => {
       state.comics = [];
       state.status = 'failure';
       state.error = action.payload;
     },
+
+    // Paginação 
+    setCurrentPage: (state, action) => {
+      state.currentPage = action.payload
+    },
+
+    setPageSize: (state, action) => {
+      state.pageSize = action.payload
+    },
+
+    setTotalResults: (state, action) => {
+      state.totalResults = action.payload
+    },
   },
 });
 
-export const { getData, getDataSuccess, getDataFailure } = apiSlice.actions;
+export const {
+  getComics,
+  getComicsSuccess,
+  getComicsFailure,
+  setCurrentPage,
+  currentPage,
+  pageSize,
+  totalResults,
+  setPageSize,
+  setTotalResults
+} = apiSlice.actions;
 
-export const fetchData = (limit, offset) => async (dispatch) => {
-  dispatch(getData());
-
-  if(!limit || !offset){
-    limit = 12 
-    offset = 2
-  }
+export const fetchComics = (pageSize, currentPage) => async (dispatch) => {
+  dispatch(getComics());
 
   try {
     const response = await axios
-    .get(`${BASE_URL}/comics?ts=${TS}&format=comic&formatType=comic&limit=${limit}&offset=${offset}&apikey=${API_KEY}&hash=${HASH}`)
-    dispatch(getDataSuccess(response.data));
+      .get(`${BASE_URL}/comics?ts=${TS}&format=comic&formatType=comic&limit=${pageSize}
+      &offset=${(currentPage - 1) * pageSize}&apikey=${API_KEY}&hash=${HASH}`)
+
+    dispatch(getComicsSuccess(response.data));
   } catch (error) {
-    dispatch(getDataFailure(error.message));
+    dispatch(getComicsFailure(error.message));
   }
 };
 
