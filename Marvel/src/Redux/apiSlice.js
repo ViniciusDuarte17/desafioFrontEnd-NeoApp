@@ -1,10 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-import { BASE_URL } from "../constants/BASE_URL";
+import { BASE_URL } from "../constants/BASE_URL.js";
 import { TS, API_KEY, HASH } from "../KEY/securityKey";
 
-// const BASE_URL = 'https://gateway.marvel.com:443/v1/public'
 
 export const apiSlice = createSlice({
   name: 'api',
