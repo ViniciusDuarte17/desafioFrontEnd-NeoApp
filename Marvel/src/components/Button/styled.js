@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 
 export const Button = styled.button`
-    background: #fff;
+    background-color: ${({ backgroundColor }) => backgroundColor ? backgroundColor : '#fff'};
+    color: ${({ customColor }) => customColor ? customColor : '#fff'};
     width: ${({ width }) => width ? width : '15vh'};
     height: ${({ height }) => height ? height : 'none'};
     border: none;

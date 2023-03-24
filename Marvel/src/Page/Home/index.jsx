@@ -7,7 +7,7 @@ import { Header } from "../../components/Header"
 import { useSelector, useDispatch } from 'react-redux';
 
 import { fetchComics, setTotalResults } from "../../Redux/apiSlice"
-import { Pagination } from "../../components/Pagination";
+
 import { Select } from "../../components/Select";
 
 

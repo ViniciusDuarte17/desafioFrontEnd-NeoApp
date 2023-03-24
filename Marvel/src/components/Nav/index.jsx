@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { goToCart, goToHome } from "../../Router/coordinator";
 import { Button } from "../Button";
 
-
 import * as S from "./styled";
 
 export const Nav = () => {
@@ -13,11 +12,14 @@ export const Nav = () => {
     <>
       <S.ContainerNav >
         <Button
+          customColor={'#000'}
           text={"Home"}
           onClick={() => goToHome(navigate)}
         />
        
         <Button
+          background={'#4fc700'}
+          customColor={'#000'}
           text={"Carrinho"}
           onClick={() => goToCart(navigate)}
         />
