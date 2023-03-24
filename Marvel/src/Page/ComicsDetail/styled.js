@@ -27,6 +27,18 @@ export const ContentMain = styled.main`
   ::-webkit-scrollbar-thumb:hover {
     background: #A60000; 
   }
+
+  @media screen and (max-width: 853px) {
+      width: 60%;
+  }
+  @media screen and (max-width: 585px) {
+      width: 70%;
+  }
+
+  @media screen and (max-width: 480px) {
+      width: 95%;
+  }
+
 `
 
 export const H1 = styled.h1`
