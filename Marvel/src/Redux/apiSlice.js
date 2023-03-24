@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-import { BASE_URL } from "../constants/BASE_URL.js";
+import { BASE_URL } from "../constants";
 import { TS, API_KEY, HASH } from "../KEY/securityKey";
 
 
