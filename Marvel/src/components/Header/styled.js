@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 
-
 export const ContainerHeader = styled.header`
     display: flex;
     justify-content: space-between;
@@ -10,4 +9,11 @@ export const ContainerHeader = styled.header`
     height: 6em;
     background-color: #000;
     color: #fff;
+`
+
+export const H1 = styled.h1`
+    font-family: 'Nunito', sans-serif;
+    font-size: large;
+    color: #fff;
+    margin: 2%;
 `

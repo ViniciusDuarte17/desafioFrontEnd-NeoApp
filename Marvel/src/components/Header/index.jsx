@@ -8,7 +8,7 @@ export const Header = ({children}) => {
 
     return (
         <S.ContainerHeader>
-            {children}
+            <S.H1>{children}</S.H1>
             <Nav />
         </S.ContainerHeader>
     )
