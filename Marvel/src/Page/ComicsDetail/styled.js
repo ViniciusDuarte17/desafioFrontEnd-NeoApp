@@ -56,4 +56,3 @@ export const ComicsPrice = styled.section`
     justify-content: center;
     margin-top: 5%;
 `
-
