@@ -25,7 +25,7 @@ export const P = styled.p `
     font-family: Arial, sans-serif; 
     font-size: 18px; 
     line-height: 1.2; 
-    color: #333; 
+    color: #fff; 
     text-align: justify;
     margin: 1%;
 `

@@ -25,7 +25,7 @@ export const ContentMain = styled.main`
 export const H1 = styled.h1`
     font-family: 'Nunito', sans-serif;
     font-size: large;
-    color: #333;
+    color: #fff;
     margin: 2%;
 `
 
@@ -33,7 +33,7 @@ export const P = styled.p `
     font-family: Arial, sans-serif; 
     font-size: 18px; 
     line-height: 1.5; 
-    color: #333; 
+    color: #fff; 
     text-align: justify;
     margin: 2%;
 `

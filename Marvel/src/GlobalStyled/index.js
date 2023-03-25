@@ -7,6 +7,7 @@ export default createGlobalStyle`
     padding: 0;
     font-family: 'Nunito', sans-serif;
     box-sizing:  border-box;
+    background: #000;
 }
  
 body {
@@ -14,7 +15,6 @@ body {
         font-family: 'Montserrat', sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #fff;
     }
 
     input, button, textarea, h1, h2, h3, h4, h5, h6 {

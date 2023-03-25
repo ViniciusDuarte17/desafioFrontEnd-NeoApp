@@ -50,7 +50,7 @@ export const ComicsDetail = () => {
                         width={"12em"}
                         height={"2.5em"}
                         customColor={"#fff"}
-                        backgroundColor={"#000"}
+                        backgroundColor={"#4a4848"}
                         text={"Voltar"}
                         onClick={() => goToHome(navigate)}
                     />
