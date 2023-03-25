@@ -4,30 +4,11 @@ import styled from "styled-components"
 export const ContentMain = styled.main`
     display: flex;
     flex-direction:column;
-    width: 40%;
-    height: 65vh;
+    width: 50%;
+    height: 40vh;
     margin: auto;
-    margin-top: 5%;
-    overflow: auto;
-    border: 1px solid #4fc700;
-    border-radius: 2%;
-
-    ::-webkit-scrollbar {
-    width: 8px; 
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #f0141e; 
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #A60000; 
-  }
-
+    padding-top: 1%;
+  
   @media screen and (max-width: 853px) {
       width: 60%;
   }
@@ -64,7 +45,8 @@ export const MarvelComics = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2%;
+    padding-bottom: 2%;
+   
 `
 
 export const ComicsPrice = styled.section`
@@ -74,3 +56,4 @@ export const ComicsPrice = styled.section`
     justify-content: center;
     margin-top: 5%;
 `
+
