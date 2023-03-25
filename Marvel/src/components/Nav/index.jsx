@@ -12,7 +12,8 @@ export const Nav = () => {
     <>
       <S.ContainerNav >
         <Button
-          customColor={'#000'}
+          background={"#000"}
+          customColor={"#000"}
           text={"Home"}
           onClick={() => goToHome(navigate)}
         />

@@ -7,7 +7,7 @@ export const ContainerHeader = styled.header`
     align-items: center;
     width: 100%;
     height: 6em;
-    background-color: #000;
+    background-color: #A60000;
     color: #fff;
 `
 
@@ -16,4 +16,5 @@ export const H1 = styled.h1`
     font-size: large;
     color: #fff;
     margin: 2%;
+    background: none;
 `

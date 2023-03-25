@@ -31,7 +31,7 @@ export const Home = () => {
     return (
         <>
             <Header >
-                <h3>Heróis </h3>
+               Heróis 
             </Header>
                 <Select />
             <S.Container>

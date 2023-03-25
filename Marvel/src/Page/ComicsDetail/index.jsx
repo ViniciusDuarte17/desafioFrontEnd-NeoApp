@@ -20,7 +20,7 @@ export const ComicsDetail = () => {
     return (
         <>
             <Header>
-                <h4>Perfil do Herói em Quadrinhos </h4>
+                Perfil do Herói em Quadrinhos
             </Header>
             <S.ContentMain>
                 <S.MarvelComics>
