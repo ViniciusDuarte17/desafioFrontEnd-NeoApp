@@ -9,7 +9,7 @@ import * as S from "./styled";
 export const CardComics = ({ comic, width, height, cursor }) => {
     const navigate = useNavigate()
 
-    const img = comic?.images[0]?.path + '/portrait_medium.jpg'
+    const img = comic.thumbnail && comic.thumbnail.path + '.' + comic.thumbnail.extension
 
     const price = comic?.prices[0]?.price.toFixed(2).toString().replace('.', ',')
 
