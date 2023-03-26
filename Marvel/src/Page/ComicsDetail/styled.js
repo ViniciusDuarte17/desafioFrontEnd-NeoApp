@@ -1,5 +1,25 @@
-import styled from "styled-components"
+import styled , { keyframes } from "styled-components"
 
+
+const slideSection = keyframes`
+    0% {
+        transform: translateY(-100%);
+    }
+    75% {
+        transform: translate(0);
+    }
+    75% {
+        transform: translateY(5%);
+    }
+    100% {
+        transform: translate(0);
+    }
+`
+
+export const Container = styled.main`
+    transition: all 0.3s ease;
+    animation: ${slideSection} 2.0s ease;
+`
 
 export const ContentMain = styled.main`
     display: flex;
@@ -8,6 +28,8 @@ export const ContentMain = styled.main`
     height: 40vh;
     margin: auto;
     padding-top: 1%;
+    padding-bottom: 5%;
+    
   
   @media screen and (max-width: 853px) {
       width: 60%;

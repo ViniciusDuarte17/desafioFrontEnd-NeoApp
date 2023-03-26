@@ -1,5 +1,19 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
+const slideSection = keyframes`
+    0% {
+        transform: translateY(-100%);
+    }
+    75% {
+        transform: translate(0);
+    }
+    75% {
+        transform: translateY(5%);
+    }
+    100% {
+        transform: translate(0);
+    }
+`
 
 export const Container = styled.main`
     width: 100%;
@@ -8,6 +22,8 @@ export const Container = styled.main`
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-left: 5%;
     padding-bottom: 5%;
+    transition: all 0.3s ease;
+    animation: ${slideSection} 2.0s ease;
 
     @media screen and (max-width: 1037px) {
         grid-template-columns: 1fr 1fr 1fr;

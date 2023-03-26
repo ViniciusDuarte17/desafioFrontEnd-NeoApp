@@ -20,7 +20,7 @@ export const ComicsDetail = () => {
     const comicsDetail = comics?.find((item) => item.id === id);
 
     return (
-        <>
+        <S.Container>
             <Header>
                 Perfil do Herói em Quadrinhos
             </Header>
@@ -69,6 +69,6 @@ export const ComicsDetail = () => {
                     </S.SectionButtonNavigate>
                 </S.MarvelComics>
             </S.ContentMain>
-        </>
+        </S.Container>
     );
 };
