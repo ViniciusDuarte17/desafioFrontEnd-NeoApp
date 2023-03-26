@@ -43,3 +43,9 @@ export const Pagination = styled.section`
         margin: 0 2% 0 2%
     }
 `
+
+export const SectionLoader = styled.section`
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+`

@@ -1,75 +1,58 @@
-import React, { useEffect } from "react"
-import * as S from './styled';
+import React, { useEffect } from "react";
+import * as S from "./styled";
 
 import { CardComics } from "../../components/CardComics";
-import { Header } from "../../components/Header"
+import { Header } from "../../components/Header";
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 
-import { fetchComics, setTotalResults } from "../../Redux/apiSlice"
+import { fetchComics, setTotalResults } from "../../Redux/apiSlice";
 
 import { Select } from "../../components/Select";
 
 import { Pagination } from "../../components/Pagination";
 
+import { Loader } from "../../components/Loader";
 
 export const Home = () => {
     const dispatch = useDispatch();
 
-    const isWithPrice = true
+    const isWithPrice = true;
 
     const comics = useSelector((state) => state.api.comics);
+    const status = useSelector((state) => state.api.status);
 
-    const pageSize = useSelector((state) => state.api.pageSize)
-    const currentPage = useSelector((state) => state.api.currentPage)
-
+    const pageSize = useSelector((state) => state.api.pageSize);
+    const currentPage = useSelector((state) => state.api.currentPage);
 
     useEffect(() => {
         dispatch(fetchComics(pageSize, currentPage));
         dispatch(setTotalResults(comics.data?.total ?? 0));
     }, [dispatch, pageSize, currentPage]);
 
-
     return (
         <>
-            <Header >
-                Heróis
-            </Header>
-            <Select />
-            <S.Container>
-                {
-                    comics?.data?.results?.map((comic) => (
+            <Header>Heróis</Header>
+
+            {status === "success" ? <Select /> : null}
+            {status === "success" ? (
+                <S.Container>
+                    {comics?.data?.results?.map((comic) => (
                         <div>
-                            <CardComics 
+                            <CardComics
                                 key={comic.id}
                                 isWithPrice={isWithPrice}
-                                comic={comic} 
+                                comic={comic}
                             />
                         </div>
-                    ))
-                }
-            </S.Container>
-            <Pagination />
+                    ))}
+                </S.Container>
+            ) : 
+            <S.SectionLoader>
+                <Loader />
+            </S.SectionLoader>}
+
+            {status === "success" ? <Pagination /> : null}
         </>
-    )
-}
-
-
- // const addComicsToCart = (newComics) => {
-    //     const index = cart.findIndex( (indexComics) => indexComics.id === newComics.id)
-       
-    //     const newCart = [...cart]
-
-    //     if(index === -1) {
-    //         //  Caso o cart estiver vazio o findIndex me retornará -1
-    //         //  Então o meu cart estará vazio. Aqui vai à lógica para 
-    //         //  Adicionar o comics no cart 
-    //         const cartItem = {...newComics, amount: 1}
-    //         newCart.push(cartItem)
-    //     } else {
-    //         // Caso já existe um item no carrinho
-    //         // Esse algorítimo mudara só a quantidade do item
-    //         newCart[index].amount = newCart[index].amount + 1
-    //     }
-    //     dispatch(setCart(newCart))
-    // }
+    );
+};
