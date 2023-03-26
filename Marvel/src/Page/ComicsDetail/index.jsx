@@ -11,6 +11,8 @@ export const ComicsDetail = () => {
     const params = useParams();
     const navigate = useNavigate();
 
+    const isWithPrice = true
+
     const id = Number(params?.id);
 
     const comics = useSelector((state) => state.api.comics.data?.results);
@@ -28,6 +30,7 @@ export const ComicsDetail = () => {
                 </S.MarvelComics>
                 <S.MarvelComics>
                     <CardComics
+                        isWithPrice={isWithPrice}
                         width={"15em"}
                         height={"19em"}
                         cursor={"default"}
