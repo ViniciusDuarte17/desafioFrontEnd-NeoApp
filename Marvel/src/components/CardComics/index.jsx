@@ -30,7 +30,7 @@ export const CardComics = ({ comic, width, height, cursor }) => {
                     width={"9em"}
                     height={"2.7em"}
                     customColor={"#fff"}
-                    backgroundColor={"#4fc700"}
+                    backgroundColor={"#ce3737"}
                     text={"Adicionar no carrinho"}
                 />
                 <S.P>

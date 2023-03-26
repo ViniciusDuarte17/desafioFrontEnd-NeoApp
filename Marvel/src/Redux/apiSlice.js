@@ -63,16 +63,17 @@ export const {
 
 export const fetchComics = (pageSize, currentPage) => async (dispatch) => {
   dispatch(getComics());
-
+ 
   try {
     const response = await axios
-      .get(`${ BASE_URL }/comics?ts=${TS}&format=comic&formatType=comic&limit=${pageSize}
+      .get(`${ BASE_URL }/comics?ts=${TS}&format=comic&formatType=comic&limit=${Number(pageSize)}
       &offset=${(currentPage - 1) * pageSize}&apikey=${API_KEY}&hash=${HASH}`)
-
+      
     dispatch(getComicsSuccess(response.data));
   } catch (error) {
     dispatch(getComicsFailure(error.message));
   }
+ 
 };
 
 export default apiSlice.reducer;

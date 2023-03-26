@@ -9,11 +9,13 @@ export const Button = ({
     width,
     customColor,
     backgroundColor,
-    background
+    background,
+    disabled
 }) => {
 
     return (
         <S.Button
+            disabled={disabled}
             customColor={customColor}
             backgroundColor={backgroundColor}
             background={background}

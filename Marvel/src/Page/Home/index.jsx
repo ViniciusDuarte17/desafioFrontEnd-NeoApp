@@ -10,38 +10,36 @@ import { fetchComics, setTotalResults } from "../../Redux/apiSlice"
 
 import { Select } from "../../components/Select";
 
+import { Pagination } from "../../components/Pagination";
 
 export const Home = () => {
     const dispatch = useDispatch();
 
     const comics = useSelector((state) => state.api.comics);
- 
+
     const pageSize = useSelector((state) => state.api.pageSize)
     const currentPage = useSelector((state) => state.api.currentPage)
 
     useEffect(() => {
         dispatch(fetchComics(pageSize, currentPage));
-        dispatch(setTotalResults(comics?.data?.results?.length ?? 0));
-    }, [dispatch, currentPage, pageSize]);
+        dispatch(setTotalResults(comics.data?.total ?? 0));
+    }, [dispatch, pageSize, currentPage]);
 
-    
-    const startIndex = (currentPage - 1) * pageSize;
-    const endIndex = startIndex + pageSize;
 
     return (
         <>
             <Header >
-               Heróis 
+                Heróis
             </Header>
-                <Select />
+            <Select />
             <S.Container>
                 {
-                    comics && comics?.data?.results?.slice(startIndex, endIndex).map((comic) => (
+                    comics?.data?.results?.map((comic) => (
                         <div key={comic?.id}><CardComics comic={comic} /></div>
                     ))
                 }
             </S.Container>
-
+            <Pagination />
         </>
     )
 }
