@@ -39,9 +39,9 @@ export const Home = () => {
             <S.Container>
                 {
                     comics?.data?.results?.map((comic) => (
-                        <div 
-                            key={comic?.id}>
+                        <div>
                             <CardComics 
+                                key={comic.id}
                                 isWithPrice={isWithPrice}
                                 comic={comic} 
                             />

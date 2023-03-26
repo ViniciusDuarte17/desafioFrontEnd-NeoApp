@@ -15,7 +15,10 @@ export const addComicsToCart = (newComics, cart, dispatch) => {
     } else {
         // Caso já existe um item no carrinho
         // Esse algorítimo mudara só a quantidade do item
-        newCart[0].amount = newCart[0].amount + 1
+        const updatedCartItem = { ...newCart[index], amount: newCart[index].amount + 1 };
+        newCart[index] = updatedCartItem;
+  
+        // newCart[index].amount = newCart[index].amount + 1
     }
     dispatch(setCart(newCart))
 }

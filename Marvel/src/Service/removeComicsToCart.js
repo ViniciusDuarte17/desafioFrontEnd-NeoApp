@@ -12,8 +12,8 @@ export const removeComicsToCart = (itemRemove, cart, dispatch) => {
         newCart.splice(index, 1)
     } else {
         // Caso o amount for maior que 1 é subtraído só o amount
-        
-        newCart[0].amount -= 1
+        const updatedCartItem = { ...newCart[index], amount: newCart[index].amount - 1 };
+        newCart[index] = updatedCartItem;
     }
     dispatch(setCart(newCart))
 }
