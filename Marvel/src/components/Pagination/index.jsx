@@ -28,10 +28,10 @@ export const Pagination = () => {
         <>
           <S.Pagination>
                 <Button
-                    width={"12em"}
-                    height={"2.5em"}
+                    width={"10em"}
+                    height={"2.3em"}
                     customColor={"#fff"}
-                    backgroundColor={"#337607"}
+                    backgroundColor={"#ffa600"}
                     text={"Anterior"}
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
@@ -40,10 +40,10 @@ export const Pagination = () => {
                     Página {currentPage} de {totalPages}
                 </span>
                 <Button
-                    width={"12em"}
-                    height={"2.5em"}
+                    width={"10em"}
+                    height={"2.3em"}
                     customColor={"#fff"}
-                    backgroundColor={"#337607"}
+                    backgroundColor={"#ffa600"}
                     text={"Próxima"}
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}

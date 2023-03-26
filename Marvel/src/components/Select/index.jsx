@@ -21,6 +21,7 @@ export const Select = () => {
         <>
             <S.ContainerSelect>
                 <S.SelectPage value={pageSize} onChange={(e) => handlePageSizeChange(e.target.value)}>
+                    <option value="10">10 por página</option>
                     <option value="20">20 por página</option>
                     <option value="50">50 por página</option>
                     <option value="100">100 por página</option>

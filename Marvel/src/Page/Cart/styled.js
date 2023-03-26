@@ -69,6 +69,17 @@ export const ComicPurchaseConfirmation = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @media screen and (max-width: 520px) {
+        width: 70%;
+        height: 6.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        
+    }
+
 `
 
 export const Paragraph = styled.p`

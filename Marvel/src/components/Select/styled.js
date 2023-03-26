@@ -17,7 +17,7 @@ export const SelectPage = styled.select`
     border: none;
     border-radius: 10px;
     color: #fff;
-    width: 20%;
+    width: 35%;
     height: 3.2em;
     font-family: Arial, sans-serif; 
     font-size: 16px; 
