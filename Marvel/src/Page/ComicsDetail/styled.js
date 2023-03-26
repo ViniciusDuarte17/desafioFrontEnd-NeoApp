@@ -12,6 +12,7 @@ export const ContentMain = styled.main`
   @media screen and (max-width: 853px) {
       width: 60%;
   }
+  
   @media screen and (max-width: 585px) {
       width: 70%;
   }
@@ -55,4 +56,10 @@ export const ComicsPrice = styled.section`
     align-items: center;
     justify-content: center;
     margin-top: 5%;
+`
+
+export const SectionButtonNavigate = styled.section`
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
 `

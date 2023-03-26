@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { goToComicsDetail } from "../../Router/coordinator";
-import { addComicsToCart } from "../../Service/addComicsToCart";
+import { addComicsToCart } from "../../Service/addComicsToCart copy";
 
 import { useSelector, useDispatch } from 'react-redux';
 

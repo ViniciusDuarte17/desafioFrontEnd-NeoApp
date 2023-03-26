@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { CardComics } from "../../components/CardComics";
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
-import { goToHome } from "../../Router/coordinator";
+import { goToCart, goToHome } from "../../Router/coordinator";
 
 export const ComicsDetail = () => {
     const params = useParams();
@@ -49,14 +49,24 @@ export const ComicsDetail = () => {
                             <p>{comicsDetail?.description}</p>
                         )}
                     </S.P>
+                    <S.SectionButtonNavigate>
                     <Button
-                        width={"12em"}
+                        width={"10em"}
                         height={"2.5em"}
                         customColor={"#fff"}
                         backgroundColor={"#4a4848"}
                         text={"Voltar"}
                         onClick={() => goToHome(navigate)}
                     />
+                    <Button
+                        width={"10em"}
+                        height={"2.5em"}
+                        customColor={"#fff"}
+                        backgroundColor={"#4fc700"}
+                        text={"Ver no carrinho"}
+                        onClick={() => goToCart(navigate)}
+                    />
+                    </S.SectionButtonNavigate>
                 </S.MarvelComics>
             </S.ContentMain>
         </>
