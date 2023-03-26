@@ -31,6 +31,10 @@ export const Cart = () => {
                     cart.length > 0 ?
                         cart.map((comic) => (
                             <section>
+                                <S.Paragraph>
+                                    Quantidade:
+                                    <strong> {comic?.amount}</strong>
+                                </S.Paragraph>
                                 <CardComics
                                     key={comic.id}
                                     comic={comic}
@@ -40,6 +44,7 @@ export const Cart = () => {
                                         Preço:
                                         {comic?.prices[0].price.toFixed(2).toString().replace('.', ',')}
                                     </span>
+                                   
                                     <Button
                                         text={'Remover'}
                                         backgroundColor={'#4fc700'}
@@ -48,6 +53,7 @@ export const Cart = () => {
                                         height={'2em'}
                                         onClick={() => removeComicsToCart(comic,cart, dispatch)}
                                     />
+                                    
 
                                 </S.ComicCardWrapperPrice>
                             </section>

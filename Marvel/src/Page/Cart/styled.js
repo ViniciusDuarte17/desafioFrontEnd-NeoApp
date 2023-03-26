@@ -54,3 +54,10 @@ export const ComicPurchaseConfirmation = styled.section`
     align-items: center;
     justify-content: space-around;
 `
+
+export const Paragraph = styled.p`
+     font-family: Arial, sans-serif; 
+     font-size: 18px; 
+     line-height: 1.5; 
+     text-align: justify;
+`
