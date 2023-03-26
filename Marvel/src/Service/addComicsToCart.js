@@ -2,8 +2,6 @@ import { setCart } from "../Redux/cartSlice"
 
 export const addComicsToCart = (newComics, cart, dispatch) => {
 
-    console.log('carrinho', cart)
-
     const index = cart.findIndex( (indexComics) => indexComics.id === newComics.id)
    
     const newCart = [...cart]
