@@ -18,7 +18,6 @@ export const addComicsToCart = (newComics, cart, dispatch) => {
         const updatedCartItem = { ...newCart[index], amount: newCart[index].amount + 1 };
         newCart[index] = updatedCartItem;
   
-        // newCart[index].amount = newCart[index].amount + 1
     }
     dispatch(setCart(newCart))
 }
