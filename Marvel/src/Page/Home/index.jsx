@@ -37,20 +37,25 @@ export const Home = () => {
             {status === "success" ? <Select /> : null}
             {status === "success" ? (
                 <S.Container>
-                    {comics?.data?.results?.map((comic) => (
-                        <div>
-                            <CardComics
-                                key={comic.id}
-                                isWithPrice={isWithPrice}
-                                comic={comic}
-                            />
-                        </div>
-                    ))}
+                    {comics?.data?.results?.map((comic) => {
+                        if (
+                            comic.thumbnail.path !==
+                            "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
+                        ) {
+                            return (
+                                <div key={comic.id}>
+                                    <CardComics isWithPrice={isWithPrice} comic={comic} />
+                                </div>
+                            );
+                        }
+                        return null;
+                    })}
                 </S.Container>
-            ) : 
-            <S.SectionLoader>
-                <Loader />
-            </S.SectionLoader>}
+            ) : (
+                <S.SectionLoader>
+                    <Loader />
+                </S.SectionLoader>
+            )}
 
             {status === "success" ? <Pagination /> : null}
         </>

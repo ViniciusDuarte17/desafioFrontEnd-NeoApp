@@ -27,7 +27,7 @@ export const CardComics = ({ comic, width, height, cursor, isWithPrice }) => {
                 cursor={cursor}
                 onClick={() => goToComicsDetail(navigate, comic.id)}
             >
-                <S.Img src={img} alt="marvel" />
+                <S.Img src={img} alt={!comic?.variantDescription ? "Quadrinho da marvel" : comic?.variantDescription} />
 
             </S.Container>
 
