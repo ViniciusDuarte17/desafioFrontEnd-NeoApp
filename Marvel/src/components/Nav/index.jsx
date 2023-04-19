@@ -12,6 +12,7 @@ export const Nav = () => {
     <>
       <S.ContainerNav >
         <Button
+          width={'18vh'}
           background={"#000"}
           customColor={"#000"}
           text={"Home"}
@@ -19,6 +20,7 @@ export const Nav = () => {
         />
        
         <Button
+          width={'18vh'}
           background={'#4fc700'}
           customColor={'#000'}
           text={"Carrinho"}
