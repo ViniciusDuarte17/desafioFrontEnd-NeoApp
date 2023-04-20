@@ -2,6 +2,8 @@ import React from "react"
 import { Header } from "../../components/Header"
 import { Button } from "../../components/Button"
 
+import ImgCart from "../../assets/cart.avif";
+
 import * as S from "./styled"
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -23,7 +25,7 @@ export const Cart = () => {
     return (
         <S.ContainerCard>
             <Header>
-                Carrinho
+                <S.Img src={ImgCart} alt="img cart" />
             </Header>
 
             <S.ContentCart>

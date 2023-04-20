@@ -7,6 +7,8 @@ import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
 import { goToCart, goToHome } from "../../Router/coordinator";
 
+import IromMan from "../../assets/Man.png";
+
 export const ComicsDetail = () => {
     const params = useParams();
     const navigate = useNavigate();
@@ -22,7 +24,7 @@ export const ComicsDetail = () => {
     return (
         <S.Container>
             <Header>
-                Perfil do Herói em Quadrinhos
+                <S.Img src={IromMan} alt="Logo irom man" />
             </Header>
             <S.ContentMain>
                 <S.MarvelComics>

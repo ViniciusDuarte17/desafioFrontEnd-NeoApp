@@ -65,3 +65,8 @@ export const SectionLoader = styled.section`
     justify-content: center;
     margin-top: 10%;
 `
+
+export const Img = styled.img`
+    width: 75px;
+    border-radius: 999px;
+`

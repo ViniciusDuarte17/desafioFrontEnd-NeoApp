@@ -4,6 +4,8 @@ import * as S from "./styled";
 import { CardComics } from "../../components/CardComics";
 import { Header } from "../../components/Header";
 
+import IronMan from "../../assets/Man.png";
+
 import { useSelector, useDispatch } from "react-redux";
 
 import { fetchComics, setTotalResults } from "../../Redux/apiSlice";
@@ -32,7 +34,9 @@ export const Home = () => {
 
     return (
         <>
-            <Header>Heróis</Header>
+            <Header>
+                <S.Img src={IronMan} alt="logo Iron Man"/>
+            </Header>
 
             {status === "success" ? <Select /> : null}
             {status === "success" ? (

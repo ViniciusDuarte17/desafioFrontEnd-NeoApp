@@ -79,7 +79,6 @@ export const ComicPurchaseConfirmation = styled.section`
         gap: 12px;
         
     }
-
 `
 
 export const Paragraph = styled.p`
@@ -87,4 +86,9 @@ export const Paragraph = styled.p`
      font-size: 18px; 
      line-height: 1.5; 
      text-align: justify;
+`
+
+export const Img = styled.img`
+    width: 75px;
+    border-radius: 999px;
 `

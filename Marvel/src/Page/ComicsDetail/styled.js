@@ -85,3 +85,8 @@ export const SectionButtonNavigate = styled.section`
     display: flex;
     justify-content: space-between;
 `
+
+export const Img = styled.img`
+    width: 75px;
+    border-radius: 999px;
+`
