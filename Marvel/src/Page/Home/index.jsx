@@ -16,6 +16,10 @@ import { Pagination } from "../../components/Pagination";
 
 import { Loader } from "../../components/Loader";
 
+import { setCartToAdd } from "../../Redux/cartSlice";
+
+import { Notify } from "../../components/Notify";
+
 export const Home = () => {
     const dispatch = useDispatch();
 
@@ -27,18 +31,39 @@ export const Home = () => {
     const pageSize = useSelector((state) => state.api.pageSize);
     const currentPage = useSelector((state) => state.api.currentPage);
 
+    const cartToAdd = useSelector((state) => state.cartSlice.cartToAdd);
+
     useEffect(() => {
         dispatch(fetchComics(pageSize, currentPage));
         dispatch(setTotalResults(comics.data?.total ?? 0));
     }, [dispatch, pageSize, currentPage]);
+
+    useEffect ( () => {
+        if(cartToAdd) {
+            setTimeout( () => {
+                dispatch( (setCartToAdd(false)))
+            }, 3000)
+        }
+    }, [cartToAdd])
 
     return (
         <>
             <Header>
                 <S.Img src={IronMan} alt="logo Iron Man"/>
             </Header>
+            
+            {cartToAdd ?
+                <Notify
+                    type='sucess'
+                    title='Sucesso!'
+                    text='Produto a adicionado no carrinho'
+                /> :
+                null}
 
-            {status === "success" ? <Select /> : null}
+            <div>
+                {status === "success" ? <Select /> : null}
+
+            </div>
             {status === "success" ? (
                 <S.Container>
                     {comics?.data?.results?.map((comic) => {

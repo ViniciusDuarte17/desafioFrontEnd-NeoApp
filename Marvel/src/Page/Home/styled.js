@@ -24,6 +24,7 @@ export const Container = styled.main`
     padding-bottom: 5%;
     transition: all 0.3s ease;
     animation: ${slideSection} 2.0s ease;
+    /* background: #000; */
 
     @media screen and (max-width: 1037px) {
         grid-template-columns: 1fr 1fr 1fr;

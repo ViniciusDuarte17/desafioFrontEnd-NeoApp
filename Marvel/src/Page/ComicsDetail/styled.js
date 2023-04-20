@@ -29,7 +29,6 @@ export const ContentMain = styled.main`
     margin: auto;
     padding-top: 1%;
     padding-bottom: 5%;
-    
   
   @media screen and (max-width: 853px) {
       width: 60%;
@@ -69,7 +68,6 @@ export const MarvelComics = styled.section`
     align-items: center;
     justify-content: center;
     padding-bottom: 2%;
-   
 `
 
 export const ComicsPrice = styled.section`

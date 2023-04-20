@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { goToComicsDetail } from "../../Router/coordinator";
-import { addComicsToCart } from "../../Service/addComicsToCart copy";
+import { addComicsToCart } from "../../Service/addComicsToCart";
 
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -19,6 +19,8 @@ export const CardComics = ({ comic, width, height, cursor, isWithPrice }) => {
 
     const cart = useSelector((state) => state.cartSlice.cart)
 
+
+   
     return (
         <>
             <S.Container

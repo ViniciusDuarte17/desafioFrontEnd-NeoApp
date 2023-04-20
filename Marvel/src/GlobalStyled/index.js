@@ -7,7 +7,7 @@ export default createGlobalStyle`
     padding: 0;
     font-family: 'Nunito', sans-serif;
     box-sizing:  border-box;
-    background: #000;
+    /* background-color: #000; */
 }
  
 body {

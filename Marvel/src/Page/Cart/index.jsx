@@ -32,7 +32,7 @@ export const Cart = () => {
                 {
                     cart.length > 0 ?
                         cart.map((comic) => (
-                            <section>
+                            <section  key={comic.id}>
                                 <S.Paragraph>
                                     Quantidade:
                                     <strong> {comic?.amount}</strong>

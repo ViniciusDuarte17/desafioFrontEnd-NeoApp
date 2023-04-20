@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as S from "./styled";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { CardComics } from "../../components/CardComics";
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
 import { goToCart, goToHome } from "../../Router/coordinator";
+import { Notify } from "../../components/Notify";
 
 import IromMan from "../../assets/Man.png";
+import { setCartToAdd } from "../../Redux/cartSlice";
 
 export const ComicsDetail = () => {
     const params = useParams();
     const navigate = useNavigate();
+
+    const dispatch = useDispatch();
 
     const isWithPrice = true
 
@@ -21,11 +25,30 @@ export const ComicsDetail = () => {
 
     const comicsDetail = comics?.find((item) => item.id === id);
 
+    const cartToAdd = useSelector((state) => state.cartSlice.cartToAdd)
+
+    useEffect ( () => {
+        if(cartToAdd) {
+            setTimeout( () => {
+                dispatch( (setCartToAdd(false)))
+            }, 3000)
+        }
+    }, [cartToAdd])
+
     return (
         <S.Container>
             <Header>
                 <S.Img src={IromMan} alt="Logo irom man" />
             </Header>
+
+            {cartToAdd ?
+                <Notify
+                    type='sucess'
+                    title='Sucesso!'
+                    text='Produto a adicionado no carrinho'
+                /> :
+                null}
+
             <S.ContentMain>
                 <S.MarvelComics>
                     <S.H1>Título: {comicsDetail?.title}</S.H1>
