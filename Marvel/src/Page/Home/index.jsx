@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+
 import * as S from "./styled";
 
 import { CardComics } from "../../components/CardComics";
@@ -22,6 +23,7 @@ import { Notify } from "../../components/Notify";
 
 export const Home = () => {
     const dispatch = useDispatch();
+
 
     const isWithPrice = true;
 
@@ -62,7 +64,6 @@ export const Home = () => {
 
             <div>
                 {status === "success" ? <Select /> : null}
-
             </div>
             {status === "success" ? (
                 <S.Container>
