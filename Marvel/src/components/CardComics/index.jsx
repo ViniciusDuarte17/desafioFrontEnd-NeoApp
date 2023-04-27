@@ -19,8 +19,6 @@ export const CardComics = ({ comic, width, height, cursor, isWithPrice }) => {
 
     const cart = useSelector((state) => state.cartSlice.cart)
 
-
-   
     return (
         <>
             <S.Container

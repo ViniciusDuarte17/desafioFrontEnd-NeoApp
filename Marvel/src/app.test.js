@@ -8,6 +8,7 @@ import { Provider } from 'react-redux'
 describe('Iniciando teste  ', () => {
 
   it('caso: 1 -> Testando a renderização do app', () => {
+    
     const { getByText } = render(
       <Provider store={store}>
         <App />
@@ -15,6 +16,7 @@ describe('Iniciando teste  ', () => {
     )
     
     const app = getByText('Home')
+
     expect(app).toBeInTheDocument()
   })
 })
